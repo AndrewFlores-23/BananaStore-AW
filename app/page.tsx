@@ -123,7 +123,7 @@ export default function Home() {
 
       <section className="visit-section" id="visitanos">
         <div className="store-photo-card">
-          <img src={`${basePath}/local-banana-huacas.jpeg`} alt="Fachada del local Banana Store en Huacas, Guanacaste" />
+          <img src={`${basePath}/local-banana-huacas-hd.jpg`} alt="Fachada del local Banana Store en Huacas, Guanacaste" />
           <div className="store-photo-shade" />
           <div className="store-location glass"><span className="location-pin">⌖</span><div><p>Estamos en</p><strong>Huacas, Guanacaste<br />Costa Rica</strong></div><a href="https://www.google.com/maps/search/?api=1&query=Banana+Huacas+Guanacaste+Costa+Rica" target="_blank" rel="noreferrer">Cómo llegar <b>↗</b></a></div>
           <span className="store-photo-label">Nuestro local</span>
