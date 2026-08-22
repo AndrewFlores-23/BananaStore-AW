@@ -123,11 +123,21 @@ export default function Home() {
       <section className="story-section" id="nosotros"><div className="story-media"><img src={`${basePath}/catalog/vestido-limon.png`} alt="Modelo de Banana Store con vestido amarillo" /><div className="glass story-sticker"><strong>Hecho para sentirte vos</strong><span><Sun size={20} /></span></div></div><div className="story-copy"><p className="eyebrow"><span /> Nuestra historia</p><h2>Somos Banana.<br /><em>Somos color.</em></h2><p>Banana Store nació para hacer la moda más simple, divertida y cercana. Seleccionamos prendas versátiles para que encontrés algo que se sienta muy vos, sin importar la ocasión.</p><p>Creemos en vestir con libertad, mezclar sin reglas y disfrutar el proceso. Aquí siempre vas a encontrar atención cálida, looks fáciles de armar y una dosis de buena energía.</p><a className="button button-dark" href="#visitanos">Conocé el local <ArrowDown size={17} /></a></div></section>
 
       <section className="visit-section" id="visitanos">
-        <div className="store-photo-card" style={{ backgroundImage: `url(${basePath}/local-banana-huacas-hd.jpg)` }}>
-          <img src={`${basePath}/local-banana-huacas-hd.jpg`} alt="Fachada del local Banana Store en Huacas, Guanacaste" />
-          <div className="store-photo-shade" />
-          <div className="store-location glass"><span className="location-pin"><MapPin size={23} /></span><div><p>Estamos en</p><strong>Huacas, Guanacaste<br />Costa Rica</strong></div><a href="https://www.google.com/maps/search/?api=1&query=Banana+Huacas+Guanacaste+Costa+Rica" target="_blank" rel="noreferrer">Cómo llegar <ArrowUpRight size={17} /></a></div>
-          <span className="store-photo-label">Nuestro local</span>
+        <div className="store-photo-card">
+          <div className="store-photo-frame">
+            <img src={`${basePath}/local-banana-huacas-hd.jpg`} alt="Fachada del local Banana Store en Huacas, Guanacaste" loading="lazy" />
+            <span className="store-photo-label">Nuestro local</span>
+          </div>
+          <div className="store-card-content">
+            <p className="eyebrow light"><span /> Huacas, Guanacaste</p>
+            <h3>Vení a vivir<br /><em>la experiencia Banana.</em></h3>
+            <p className="store-card-copy">Un espacio lleno de color, prendas versátiles y atención cercana en el corazón de Huacas.</p>
+            <div className="store-address">
+              <span className="location-pin"><MapPin size={23} /></span>
+              <div><small>Ubicación</small><strong>Huacas, Guanacaste<br />Costa Rica</strong></div>
+            </div>
+            <a className="store-map-button" href="https://www.google.com/maps/search/?api=1&query=Banana+Huacas+Guanacaste+Costa+Rica" target="_blank" rel="noreferrer">Cómo llegar <ArrowUpRight size={17} /></a>
+          </div>
         </div>
         <div className="visit-card"><p className="eyebrow light"><span /> Vení a conocernos</p><h2>Tu próximo look<br /><em>te está esperando.</em></h2><div className="visit-grid"><div><span>Ubicación</span><strong>Huacas, Guanacaste<br />Costa Rica</strong></div><div><span>Horario demo</span><strong>Lun — Sáb<br />10:00 — 19:00</strong></div><div><span>WhatsApp</span><strong>+506 8770-9970<br />Consultas y disponibilidad</strong></div></div><p className="demo-note">El horario es demostrativo y puede reemplazarse por el horario oficial del local.</p></div>
         <div className="newsletter glass"><span className="newsletter-icon"><Sparkles size={33} /></span><div><p className="eyebrow"><span /> Club Banana</p><h3>Enterate primero.</h3><p>Recibí novedades, nuevos ingresos y looks de la semana.</p></div><form onSubmit={(event) => event.preventDefault()}><label className="sr-only" htmlFor="email">Correo electrónico</label><input id="email" type="email" placeholder="tu@email.com" required /><button type="submit" aria-label="Suscribirse"><ArrowRight size={20} /></button></form></div>
