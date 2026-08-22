@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from 'react';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 type Product = { id: number; name: string; image: string; category: 'Camisa' | 'Camiseta' | 'Vestido' | 'Short' | 'Pantalón' | 'Top'; audience: 'Hombre' | 'Mujer'; price: string; color: string; isNew?: boolean };
 
 const products: Product[] = [
@@ -21,7 +23,7 @@ function ProductCard({ product, favorite, onFavorite }: { product: Product; favo
   return (
     <article className="product-card">
       <div className="product-image">
-        <img src={product.image} alt={`${product.name}, ${product.category.toLowerCase()} para ${product.audience.toLowerCase()}`} />
+        <img src={`${basePath}${product.image}`} alt={`${product.name}, ${product.category.toLowerCase()} para ${product.audience.toLowerCase()}`} />
         {product.isNew && <span className="new-pill">Nuevo</span>}
         <button className={favorite ? 'is-favorite' : ''} onClick={onFavorite} aria-label={`${favorite ? 'Quitar' : 'Guardar'} ${product.name}`} aria-pressed={favorite}>{favorite ? '♥' : '♡'}</button>
         <div className="size-strip"><span>XS</span><span>S</span><span>M</span><span>L</span></div>
@@ -64,8 +66,8 @@ export default function Home() {
           <div className="hero-note"><span className="avatar-stack"><i /><i /><i /></span><p><strong>Nuevos looks cada semana</strong><br />Elegidos para vos, con amor local.</p></div>
         </div>
         <div className="hero-visual">
-          <div className="hero-image-wrap"><img src="/catalog/camisa-sol.png" alt="Modelo con camisa amarilla y pantalón crema" /><div className="glass look-card"><span className="look-dot" /><div><strong>Look del día</strong><small>Camisa Sol · ₡18.900</small></div><a href="#catalogo" aria-label="Ver Camisa Sol">＋</a></div></div>
-          <div className="logo-badge glass"><img src="/banana-logo.jpeg" alt="Logo de Banana Store" /></div>
+          <div className="hero-image-wrap"><img src={`${basePath}/catalog/camisa-sol.png`} alt="Modelo con camisa amarilla y pantalón crema" /><div className="glass look-card"><span className="look-dot" /><div><strong>Look del día</strong><small>Camisa Sol · ₡18.900</small></div><a href="#catalogo" aria-label="Ver Camisa Sol">＋</a></div></div>
+          <div className="logo-badge glass"><img src={`${basePath}/banana-logo.jpeg`} alt="Logo de Banana Store" /></div>
           <span className="float-label glass">Fresco · Local · Vos</span>
         </div>
       </section>
@@ -88,7 +90,7 @@ export default function Home() {
       </section>
 
       <section className="story-section" id="nosotros">
-        <div className="story-media"><img src="/catalog/vestido-limon.png" alt="Modelo de Banana Store con vestido amarillo" /><div className="glass story-sticker"><strong>Hecho para sentirte vos</strong><span>☀</span></div></div>
+        <div className="story-media"><img src={`${basePath}/catalog/vestido-limon.png`} alt="Modelo de Banana Store con vestido amarillo" /><div className="glass story-sticker"><strong>Hecho para sentirte vos</strong><span>☀</span></div></div>
         <div className="story-copy"><p className="eyebrow"><span /> Nuestra historia</p><h2>Somos Banana.<br /><em>Somos color.</em></h2><p>Banana Store nació para hacer la moda más simple, divertida y cercana. Seleccionamos prendas versátiles para que encontrés algo que se sienta muy vos, sin importar la ocasión.</p><p>Creemos en vestir con libertad, mezclar sin reglas y disfrutar el proceso. Aquí siempre vas a encontrar atención cálida, looks fáciles de armar y una dosis de buena energía.</p><a className="button button-dark" href="#visitanos">Conocé el local <span>↓</span></a></div>
       </section>
 

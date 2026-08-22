@@ -4,13 +4,14 @@ import './globals.css';
 
 const outfit = Outfit({ variable: '--font-outfit', subsets: ['latin'] });
 export const metadata: Metadata = {
-  metadataBase: new URL('https://banana-store-cr.andrewmanuelcoreaflo.chatgpt.site'),
+  metadataBase: new URL('https://andrewflores-23.github.io/BananaStore-AW/'),
   title: 'Banana Store | Tu estilo, sin complicaciones',
   description: 'Moda para hombre y mujer con una selección fresca, alegre y versátil.',
   openGraph: {
     title: 'Banana Store | Tu estilo, sin complicaciones',
     description: 'Prendas frescas, versátiles y con mucha actitud.',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Banana Store — Tu estilo. Sin complicaciones.' }],
+    url: 'https://andrewflores-23.github.io/BananaStore-AW/',
+    images: [{ url: 'https://andrewflores-23.github.io/BananaStore-AW/og.png', width: 1200, height: 630, alt: 'Banana Store — Tu estilo. Sin complicaciones.' }],
     locale: 'es_CR',
     type: 'website',
   },
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Banana Store | Tu estilo, sin complicaciones',
     description: 'Prendas frescas, versátiles y con mucha actitud.',
-    images: ['/og.png'],
+    images: ['https://andrewflores-23.github.io/BananaStore-AW/og.png'],
   },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="es"><body className={outfit.variable}>{children}</body></html>; }

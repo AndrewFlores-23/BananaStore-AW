@@ -1,4 +1,3 @@
-@import 'tailwindcss';
 :root { --yellow: #ffd31f; --ink: #151512; --cream: #f7f3e8; --white: #fffdf7; }
 * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--font-outfit), Arial, sans-serif; } a { color: inherit; text-decoration: none; } button { font: inherit; }
 .glass { background: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.72); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 14px 40px rgba(28,25,16,.1); backdrop-filter: blur(22px) saturate(150%); }
