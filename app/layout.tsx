@@ -4,6 +4,7 @@ import './globals.css';
 
 const outfit = Outfit({ variable: '--font-outfit', subsets: ['latin'] });
 export const metadata: Metadata = {
+  metadataBase: new URL('https://banana-store-cr.andrewmanuelcoreaflo.chatgpt.site'),
   title: 'Banana Store | Tu estilo, sin complicaciones',
   description: 'Moda para hombre y mujer con una selección fresca, alegre y versátil.',
   openGraph: {
