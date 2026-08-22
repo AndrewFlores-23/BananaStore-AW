@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight, Heart, MapPin, MessageCircle, Plus, Search, Sparkles, Sun, X } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, Heart, MapPin, MessageCircle, Plus, Search, Sun, X } from 'lucide-react';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
         </div>
         <div className="visit-card"><p className="eyebrow light"><span /> Vení a conocernos</p><h2>Tu próximo look<br /><em>te está esperando.</em></h2><div className="visit-grid"><div><span>Ubicación</span><strong>Huacas, Guanacaste<br />Costa Rica</strong></div><div><span>Horario demo</span><strong>Lun — Sáb<br />10:00 — 19:00</strong></div><div><span>WhatsApp</span><strong>+506 8770-9970<br />Consultas y disponibilidad</strong></div></div><p className="demo-note">El horario es demostrativo y puede reemplazarse por el horario oficial del local.</p></div>
-        <div className="newsletter glass"><span className="newsletter-icon"><Sparkles size={33} /></span><div><p className="eyebrow"><span /> Club Banana</p><h3>Enterate primero.</h3><p>Recibí novedades, nuevos ingresos y looks de la semana.</p></div><form onSubmit={(event) => event.preventDefault()}><label className="sr-only" htmlFor="email">Correo electrónico</label><input id="email" type="email" placeholder="tu@email.com" required /><button type="submit" aria-label="Suscribirse"><ArrowRight size={20} /></button></form></div>
+        <div className="newsletter glass"><span className="newsletter-icon" role="img" aria-label="Banana">🍌</span><div><p className="eyebrow"><span /> Club Banana</p><h3>Enterate primero.</h3><p>Recibí novedades, nuevos ingresos y looks de la semana.</p></div><form onSubmit={(event) => event.preventDefault()}><label className="sr-only" htmlFor="email">Correo electrónico</label><input id="email" type="email" placeholder="tu@email.com" required /><button type="submit" aria-label="Suscribirse"><ArrowRight size={20} /></button></form></div>
       </section>
 
       <footer><a className="footer-brand" href="#inicio"><span className="brand-mark">Ba</span><strong>Banana</strong></a><p>Moda alegre para todos los días.</p><div className="footer-links"><a href="#nuevos">Nuevos</a><a href="#catalogo">Catálogo</a><a href="#nosotros">Quiénes somos</a><a href="#visitanos">Contacto</a></div><div className="footer-bottom"><span>© 2026 Banana Store · Sitio de demostración</span><div className="creation-credit"><span>Propuesta web creada por</span><img src={`${basePath}/aw-risecr-logo.png`} alt="Logo de AW-RiseCR" /><strong>AW-RiseCR</strong></div></div></footer>
